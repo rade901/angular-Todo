@@ -1,1 +1,6 @@
-<p>todos works!</p>
+<div class="todos"></div>
+<div class="todo" *ngFor="let todo of todos; let i = index;">
+    <div class="id">{{ i }}</div>
+    <div class="content">{{ todo.content}}</div>
+    <button class="dlete">Remove</button>
+</div>
