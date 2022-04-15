@@ -48,5 +48,6 @@ inputTodo:string = "";
       date: new Date()
     })
     this.inputTodo = "";
+    
   }
 }

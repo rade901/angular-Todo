@@ -1,5 +1,6 @@
 .todo.done .content {
     text-decoration: line-through;
+    cursor: pointer;
 }
 
 input {
@@ -9,6 +10,7 @@ input {
     background-color: rgb(235, 233, 231);
     border: none;
     border-bottom: 1px solid #ccc;
+    cursor: pointer;
 }
 
 .todo {
@@ -21,6 +23,7 @@ input {
     border-radius: 5px;
     padding: 1rem;
     margin-bottom: 1rem;
+    padding: 7rem;
 }
 
 .todo-submit {
@@ -36,4 +39,27 @@ input {
     font-weight: bold;
     border: none;
     padding: 0.1rem;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.todo-add:hover {
+    cursor: pointer;
+    background-color: rgb(230, 225, 225);
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+.todos-length {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.content {
+    cursor: pointer;
 }
