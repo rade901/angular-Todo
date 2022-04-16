@@ -1,22 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { MaxLengthValidator } from '@angular/forms';
+import { PageEvent } from '@angular/material/paginator';
 import { Todo } from '../../models/Todo';
+
 
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.css']
 })
-export class TodosComponent implements OnInit {
 
+export class TodosComponent implements OnInit {
  
 todos:Todo[];
 
 inputTodo:string = "";
 
-
   constructor() {}
 
   ngOnInit(): void {
+
     this.todos = [
       {
         content: 'First todo',
@@ -50,4 +53,12 @@ inputTodo:string = "";
     this.inputTodo = "";
     
   }
+  OnPageChange(event:PageEvent) {
+    const start = event.pageIndex * event.pageSize;
+    let end = start + event.pageSize;
+    if (end > this.todos.length) end = this.todos.length;
+  }
+  
 }
+
+

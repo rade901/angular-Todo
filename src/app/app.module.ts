@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatDialogModule} from "@angular/material/dialog";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -12,7 +15,10 @@ import { TodosComponent } from './components/todos/todos.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
